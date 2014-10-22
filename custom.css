@@ -1,12 +1,10 @@
 body {
   font-family: Verdana;
   /*color: DodgerBlue;*/
-/*
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;*/
+
+  margin: 0 40px;
 }
-/*
-body div {
-  color: Black;
-}*/
+
+body header {
+  text-align: center;
+}
