@@ -3,9 +3,13 @@
 {
   var app = angular.module('store', [ ]);
 
-  // angularjs
-  // module
-  // dependency
+  // Modules - Where our application components live
+
+  app.controller('StoreController', function(){
+    this.products = gems; // 'product' property of StoreController
+  });
+
+  // Controllers - Where we add application behavior
 
   var gems = [
     {
@@ -25,9 +29,6 @@
       soldOut: true,
     }
   ]
-  app.controller('StoreController', function(){
-    this.products = gems; // 'product' property of StoreController
-  });
 }
 
 )();
