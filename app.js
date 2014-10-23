@@ -11,6 +11,17 @@
 
   // Controllers - Where we add application behavior
 
+  app.controller('PanelController', function(){
+    this.tab = 1; // init description
+
+    this.selectTab = function(arg){
+      this.tab = arg;
+    };
+    this.isSelected = function(arg){
+      return this.tab === arg;  // return true or false
+    };
+  });
+
   var gems = [
     {
       name: "Azurite",
