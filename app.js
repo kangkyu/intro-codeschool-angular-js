@@ -12,13 +12,22 @@
   // Controllers - Where we add application behavior
 
   app.controller('PanelController', function(){
-    this.tab = 1; // init description
+    this.tab = 3; // init description
 
     this.selectTab = function(arg){
       this.tab = arg;
     };
     this.isSelected = function(arg){
       return this.tab === arg;  // return true or false
+    };
+  });
+
+  app.controller('ReviewController', function(){
+    this.review = {};
+
+    this.addReview = function(product){
+      product.reviews.push(this.review); // when submit button pressed
+      this.review = {};
     };
   });
 
@@ -36,7 +45,18 @@
         {full: "images/gem-05.gif"},
         {full: "images/gem-09.gif"}
       ],
-      reviews: []
+      reviews: [
+        {
+          stars: 3,
+          body: "I think this gem was just OK, could honestly use more shine, IMO.",
+          author: "JimmyDean@example.com"
+        },
+        {
+          stars: 4,
+          body: "Any gem with 12 faces is for me!",
+          author: "gemsRock@example.com"
+        }
+      ]
     },
     {
       name: "Bloodstone",
