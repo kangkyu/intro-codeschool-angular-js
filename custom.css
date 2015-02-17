@@ -10,9 +10,9 @@ body header {
 }
 
 .ng-invalid.ng-dirty {
-  border-color: #FA787E;
+  border-color: #FA787E;  /*Red border for invalid*/
 }
 
 .ng-valid.ng-dirty {
-  border-color: #78FA89;  
+  border-color: #78FA89;  /*Green border for valid*/
 }
